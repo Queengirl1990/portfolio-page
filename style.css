@@ -12,7 +12,7 @@
     --bg-color: #101317;
     --second-bg-color: #dadde0;
     --text-color: #fff;
-    --main-color: ;
+    --main-color: #383a3d;
 }
 
 html {
@@ -153,9 +153,9 @@ span {
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
-    background-color: var(--main-color);
+    background: linear-gradient(to right, #ffffff, #cdd2db35);
     border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--main-color);
+    box-shadow: 0 0 1rem var(#464647);
     font-size: 1.6rem;
     color: var(--second-bg-color);
     letter-spacing: 0.1rem;
