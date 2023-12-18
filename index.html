@@ -181,21 +181,20 @@
         </div>
     </section>
 
-    <section class="contakt" id="kontakt">
-        <h2 class="heading">Kontakt<span>formular</span></h2>
-        <form action="#">
+    <div class="contakt">
+        <h2>Contact Me</h2>
+        <form action="#" method="POST">
             <div class="input-box">
-                <input type="text" placeholder="Name*">
-                <input type="email" placeholder="Emailadresse*">
+                <input type="text" name="name" placeholder="Your Name">
+                <input type="email" name="email" placeholder="Your Email">
             </div>
-            <div class="input-box">
-                <input type="number" placeholder="Telefonnummer">
-                <input type="text" placeholder="Betreff">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Ihre Nachricht*"></textarea>
-            <input type="submit" value="Abschicken" class="btn">
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <!-- Hier ist der aktualisierte Button-Code -->
+            <button class="cta" type="submit">
+                <span class="hover-underline-animation">Send Message</span>
+            </button>
         </form>
-    </section>
+    </div>
 
     <footer class="footer">
         <div class="social">
