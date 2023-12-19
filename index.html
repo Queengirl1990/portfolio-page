@@ -9,6 +9,9 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-BVz0iZlEExU1eIgmF8e+h6fv25xFbPldHkwp8bfCj5jOT1uGzOz66lLdnCwzgG8P4e1Bt5x2FFxgY1MaFrlCOQ=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
@@ -123,9 +126,14 @@
     </section>
 
     <section class="portfolio" id="portfolio">
+        <div class="buttons">
+            <button type="button-prev" className="slick-prev">&#10094;</button>
+        </div>
         <h2 class="heading">Meine <span>Projekte</span></h2>
 
+
         <div class="portfolio-container">
+
             <div class="portfolio-box">
                 <img src="assets/design.png" alt="">
                 <div class="portfolio-info">
@@ -185,7 +193,9 @@
                     <a href="#"><i class='bx bx-link'></i></a>
                 </div>
             </div>
-
+        </div>
+        <div class="buttons">
+            <button type="button-next" className="slick-next">&#10095;</button>
         </div>
     </section>
 
@@ -200,7 +210,6 @@
                     <input type="email" name="email" placeholder="Email">
                 </div>
                 <textarea name="message" placeholder="Nachricht"></textarea>
-                <!-- Hier ist der aktualisierte Button-Code -->
                 <button class="cta" type="submit">
                     <span class="hover-underline-animation">Send Message</span>
                 </button>
@@ -241,7 +250,6 @@
 
     <script src="script.js"></script>
 
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -249,8 +257,47 @@
     <script src="script.js"></script>
 
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const portfolioContainer = document.querySelector('.portfolio-container');
+            const arrowLeft = document.querySelector('.fa-arrow-left');
+            const arrowRight = document.querySelector('.fa-arrow-right');
+
+            arrowLeft.addEventListener('click', () => {
+                // Logik für die Verschiebung zur vorherigen Card
+                portfolioContainer.scrollBy({
+                    left: -300, // Ändere dies entsprechend der Breite deiner Cards
+                    behavior: 'smooth',
+                });
+            });
+
+            arrowRight.addEventListener('click', () => {
+                // Logik für die Verschiebung zur nächsten Card
+                portfolioContainer.scrollBy({
+                    left: 300, // Ändere dies entsprechend der Breite deiner Cards
+                    behavior: 'smooth',
+                });
+            });
+
+            // Füge eine Event-Listener-Funktion hinzu, um die Pfeiltasten der Tastatur zu verwenden
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'ArrowLeft') {
+                    // Logik für die Verschiebung zur vorherigen Card
+                    portfolioContainer.scrollBy({
+                        left: -300, // Ändere dies entsprechend der Breite deiner Cards
+                        behavior: 'smooth',
+                    });
+                } else if (event.key === 'ArrowRight') {
+                    // Logik für die Verschiebung zur nächsten Card
+                    portfolioContainer.scrollBy({
+                        left: 300, // Ändere dies entsprechend der Breite deiner Cards
+                        behavior: 'smooth',
+                    });
+                }
+            });
+        });
+
         $(document).ready(function () {
-            $('.portfolio-slider').slick({
+            $('.portfolio-container').slick({
                 infinite: true,
                 slidesToShow: 3,
                 slidesToScroll: 1,
@@ -267,6 +314,7 @@
                 ]
             });
         });
+
     </script>
 </body>
 

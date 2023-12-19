@@ -21,6 +21,7 @@ html {
     overflow-x: hidden;
 }
 
+
 body {
     background: url('assets/RSVP2.png') center center fixed;
     background-size: cover;
@@ -289,12 +290,20 @@ span {
     width: 50px;
 }
 
+.portfolio {
+    margin-right: 2vw;
+    margin-left: 2vw;
+
+}
+
+
 .portfolio h2 {
     padding: 6rem;
     margin-bottom: 4rem;
 }
 
 .portfolio-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     overflow-x: auto;
@@ -378,11 +387,16 @@ span {
     color: var(--second-bg-color);
 }
 
+.arrow-icon {
+    font-size: 2rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
 .contakt {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Center the items horizontally */
 }
 
 .contakt h2 {
