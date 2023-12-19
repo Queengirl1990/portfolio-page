@@ -107,6 +107,7 @@ span {
 }
 
 .home-content h1 {
+    color: white;
     font-size: 7rem;
     font-weight: 700;
     line-height: 1.3;
@@ -294,10 +295,25 @@ span {
 }
 
 .portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding: 2rem;
+}
+
+.portfolio-box {
+    flex: 0 0 30%;
+    max-width: 30%;
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    margin-right: 2rem;
+}
+
+.portfolio-box:last-child {
+    margin-right: 0;
 }
 
 .portfolio-container .portfolio-box {

@@ -7,6 +7,10 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
 
 <body>
@@ -30,11 +34,9 @@
 
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Herzlich Willkommen</h3>
-            <h1>Ich bin Anja Brühl</h1>
-            <h3>Grafikdesign & <span>App Entwicklerin</span></h3>
-            <p>Willkommen auf meiner Portfolio Website.</p>
-            <p>Begleiten Sie mich auf meiner Reise zur App Entwicklerin und beim Erlernen von Frontend Techniken.</p>
+            <h1>Grafikdesign & <span>App Entwicklerin</span></h1>
+            <h2>Willkommen auf meiner Portfolio Website. Begleiten Sie mich auf meiner Reise zur App Entwicklerin und
+                beim Erlernen von Frontend Techniken.</h2>
 
             <div class="social-icons">
                 <a href="#"><i class='bx bxl-github'></i></a>
@@ -238,6 +240,34 @@
     </footer>
 
     <script src="script.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.portfolio-slider').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+                nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 </body>
 
 </html>
