@@ -13,7 +13,7 @@
     --second-bg-color: #dadde0;
     --text-color: #fff;
     --second-text: #292626;
-    --main-color: #8c8d8f;
+    --main-color: #d1a280;
 }
 
 html {
@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    background: url('assets/background.png') center center fixed;
+    background: url('assets/RSVP2.png') center center fixed;
     background-size: cover;
     color: var(--text-color);
     margin: 0;
@@ -91,6 +91,7 @@ section {
 }
 
 .home-content h3 {
+    color: white;
     font-size: 3.2rem;
     font-weight: 700;
 }
@@ -241,7 +242,7 @@ span {
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-    height: 320px;
+    height: 350px;
 }
 
 .skill .skill-container {
